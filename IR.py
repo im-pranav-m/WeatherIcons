@@ -5,7 +5,7 @@ import os
 SIZES = [512, 256, 128, 64, 32, 24, 16]
 
 INPUT_DIR = "."
-IMAGE_EXTENSIONS = (".png", ".jpg", ".jpeg", ".webp")
+IMAGE_EXTENSIONS = tuple("."+ext for ext in ("png", "jpg", "jpeg", "webp"))
 
 def create_folders():
     for size in SIZES:
